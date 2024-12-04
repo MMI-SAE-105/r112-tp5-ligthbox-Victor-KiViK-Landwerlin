@@ -2,12 +2,35 @@
 * Lightbox
 */
 #lightbox{
+    border-color: blue;
     border-radius: 20px; ;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #lightbox::backdrop{
     background: blueviolet;
-    opacity: 50%;
+    animation: fond 2s forwards;
 }
 
+
+#lightbox {
+      animation: open 1s forwards;
+    }
+  
+  @keyframes fond{
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 50%;
+    }
+  }
+
+  @keyframes open {
+    from {
+      transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+  }
+  
